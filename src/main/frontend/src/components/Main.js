@@ -32,7 +32,7 @@ export default function Home() {
     };
 
     const fetchGames = () => {
-        axios.get('/games') // 게임 데이터를 서버에서 불러오기
+        axios.get('http://localhost:8080/games') // 게임 데이터를 서버에서 불러오기
             .then(response => {
                 setGames(response.data.content); // 응답에서 게임 데이터를 상태에 저장
             })

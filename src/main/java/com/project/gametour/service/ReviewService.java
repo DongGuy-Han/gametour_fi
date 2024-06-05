@@ -23,7 +23,7 @@ public class ReviewService {
         review.setCreateDate(LocalDateTime.now());
         review.setLiker(new HashSet<>());
 
-        game.getReviewList().add(review);
+//        game.getReviewList().add(review);
         double starPoint = game.averageStarPoint();
         game.setStarPoint(starPoint);
         gameRepository.save(game);

@@ -54,7 +54,7 @@ function SearchResults() {
     useEffect(() => {
         const fetchSearchResults = async () => {
             try {
-                const response = await axios.get(`/games`, { params: { kw: query } });
+                const response = await axios.get(`http://localhost:8080/games`, { params: { kw: query } });
                 setGames(response.data.content);
                 setLoading(false);
             } catch (err) {

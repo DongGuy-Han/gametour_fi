@@ -24,7 +24,6 @@ public class UserResponseDto {
                 .id(user.getId())
                 .username(user.getUsername())
                 .name(user.getName())
-                .reviewList(user.getReviewList())
                 .build();
     }
 }

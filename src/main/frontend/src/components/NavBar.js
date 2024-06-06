@@ -3,15 +3,15 @@ import { useNavigate } from "react-router-dom";
 import { AuthContext } from '../contexts/AuthContext'; // AuthContext import
 import srchicon from './test_image/srchicon.svg';
 import './css/NavBar.css';
+import axios from "axios";
 
 const NavBar = ({ textValue, handleSetValue, handleKeyDown }) => {
     const navigate = useNavigate();
-    const { isLoggedIn, setIsLoggedIn } = useContext(AuthContext); // 로그인 상태와 함수 가져오기
+    const { isLoggedIn, setIsLoggedIn } = useContext(AuthContext);
 
     const handleLogout = async () => {
         try {
-            // 로그아웃 로직 구현 예시
-            // await axios.post('/logout', {}, { withCredentials: true });
+            await axios.post('/logout', {}, { withCredentials: true });
             setIsLoggedIn(false);
             navigate('/');  // 로그아웃 후 메인 페이지로 리디렉션
         } catch (error) {
@@ -20,15 +20,15 @@ const NavBar = ({ textValue, handleSetValue, handleKeyDown }) => {
     };
 
     const handleLogin = () => {
-        window.location.href = 'http://localhost:8080/login'; // 로그인 페이지로 이동
+        window.location.href = 'http://localhost:8080/login';
     };
 
     const handleSignup = () => {
-        navigate('/signup'); // 회원가입 페이지로 이동
+        navigate('/signup');
     };
 
     const handleMain = () => {
-        navigate('/'); // 메인 페이지로 이동
+        navigate('/');
     };
 
     return (
@@ -42,7 +42,8 @@ const NavBar = ({ textValue, handleSetValue, handleKeyDown }) => {
                     <div className='right-content'>
                         <div className='srch'>
                             <img src={srchicon} width='20px' alt='Search Icon'></img>
-                            <textarea
+                            <input
+                                type="text"
                                 placeholder='검색어를 입력해주세요'
                                 value={textValue}
                                 onChange={handleSetValue}

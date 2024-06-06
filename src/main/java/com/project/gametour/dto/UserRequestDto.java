@@ -26,7 +26,6 @@ public class UserRequestDto {
                 .password(userRequestDto.getPassword1())
                 .name(userRequestDto.getName())
                 .role(UserRole.USER.getValue())
-                .reviewList(new ArrayList<>())
                 .createDate(LocalDateTime.now())
                 .build();
     }

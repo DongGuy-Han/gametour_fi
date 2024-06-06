@@ -5,21 +5,20 @@
     margin-right: auto;
     width: 100%;
     font-family: 'Arial', sans-serif;
-    /* background: #f0f0f0; */
 }
 
 h1 {
-    font-size: 32px; /* 큰 제목 크기 조정 */
+    font-size: 32px;
     color: white;
     margin-top: 0;
     margin-bottom: 2%;
-    
 }
 
 h4 {
     font-size: 17px;
     margin-top: 0;
 }
+
 p {
     font-size: 16px;
 }
@@ -35,7 +34,6 @@ p {
     flex-direction: column;
     padding: 20px;
     border-radius: 8px;
-    
 }
 
 .first-row, .second-row {
@@ -47,11 +45,11 @@ p {
 .game-banner {
     display: flex;
     flex-direction: column;
-    align-items: center; /* 중앙 정렬로 변경 */
+    align-items: center;
 }
 
 .game-banner img {
-    max-height: 300px; /* 이미지 크기 조절 */
+    max-height: 300px;
     width: auto;
     border-radius: 5px;
     margin-bottom: 20px;
@@ -67,7 +65,7 @@ p {
 }
 
 .purchase-options a:hover {
-    background-color: #0056b3; /* 버튼 호버 효과 */
+    background-color: #0056b3;
 }
 
 .game-info {
@@ -76,7 +74,7 @@ p {
 }
 
 .game-rating {
-    background: #f8f8f8; /* 별점 배경 색상 조정 */
+    background: #f8f8f8;
     padding: 15px;
     border-radius: 5px;
     height: fit-content;
@@ -89,25 +87,55 @@ p {
 }
 
 .rating-bar:hover {
-    background: #2171b5; /* 호버 시 색상 변경 */
+    background: #2171b5;
 }
 
 .review-item {
-    background: white;
-    border: 1px solid #ddd;
-    padding: 10px;
-    border-radius: 5px;
-    margin-bottom: 10px;
+    background: #f8f9fa;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.review-item:hover {
+    transform: translateY(-5px);
 }
 
 .review-item h3 {
-    color: #007bff; /* 리뷰 사용자 이름 색상 변경 */
+    color: #0056b3;
+    font-weight: bold;
+}
+
+.review-item h3:hover {
+    text-decoration: underline;
+}
+
+.review-item p {
+    font-size: 15px;
+    color: #333;
+    line-height: 1.5;
 }
 
 .rating-text {
-    font-size: 0.75em;
-    color: #666;
+    font-size: 14px;
+    color: #888;
     padding: 2px 5px;
+    display: inline-block;
+    background-color: #eef;
+    border-radius: 5px;
 }
 
-/* 기타 세부 스타일링 추가 */
+.StarRatings {
+    margin-bottom: 15px;
+}
+
+.StarRatings svg {
+    fill: #ffd700;
+}
+
+.StarRatings svg:hover {
+    fill: #ffac33;
+}
